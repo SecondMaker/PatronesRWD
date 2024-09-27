@@ -39,3 +39,17 @@ h1 {
 }
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) {
+    .dos-columnas{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem; /*Metodo nuevo, no funcionaba en safari*/
+    } 
+    
+    /*Este metodo es muy soportado por muchos navegadores 
+    .entrada-blog{
+        flex-basis: calc(50% - 1rem);  Una manera de hacerlo
+        flex: 0 0 calc(50% - 1rem); Otra manera de hacer lo de arriba 
+    }  */
+}
