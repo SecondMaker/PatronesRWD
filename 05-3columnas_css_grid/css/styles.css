@@ -49,3 +49,24 @@ p {
 
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) {
+    .contenedor-grid{
+        display: grid;
+     /* grid-template-columns: 20% 60% 20%; Metodo por porcentaje */
+        grid-template-columns: 1fr 3fr 1fr; /* Metodo por fracciones */
+        grid-template-areas: "izquierda contenido derecha";
+        grid-auto-flow: column;
+        column-gap: 2rem;
+    }
+
+    .contenido-principal{
+        /* grid-column: 2 /3 ; Metodo numerico */
+        grid-area: contenido;
+    }
+
+    .sidebar-1{
+        /* grid-column: 1 / 2; Metodo numerico */
+        grid-area: izquierda;
+    }
+}
